@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="tema" rel="stylesheet" type="text/css" href="estilos/frutiger.css">
+    <title>Tema 2</title>
+</head>
+<body>
+    
+    <header class="barraSuperior">
+        <div class="seccionIzquierda">
+            <img onmouseout="this.src='img/WinVistaLogo.png';" onmouseover="this.src='img/Win9XLogo.png';" src="img/WinVistaLogo.png" class="botonInicio logoNormal" onclick="cambiarTema()"/>
+        </div>
+        
+        <div class="itemMenu botonHamburguesa" onclick="mostrarMenu()">
+            <a href="#"><img src="img/tecla-menu-contextual.png"/></a>
+        </div>
+
+        <ul class="listaMenu" id="menuNavegacion">
+            <li class="itemMenu elementoEscritorio"><a href="index.html">Principal</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema1.html">Tema 1</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema2.html">Tema 2</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema3.html">Tema 3</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema4.html">Tema 4</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema5.html">Tema 5</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema6.html">Tema 6</a></li>
+        </ul>
+    </header>
+
+    <script>
+        // Función para desplegar menú en el móvil
+        function mostrarMenu() {
+            const menu = document.getElementById('menuNavegacion');
+            menu.classList.toggle('desplegado');
+        }
+    </script>
+
+    <main class="ventanaPrincipal cristalAero">
+        <h1>Tema 2: Uso de Estilos</h1>
+
+        <img src="img/Tema2.jpg" class="imagenPortada"/>
+
+        <section>
+            <h2>Contenidos</h2>
+            <div>
+                <button class="botonPdf itemMenu" onclick="window.open('docs/Unidad2.pdf', '_blank')">Teoría de la unidad - PDF</button>
+                <a href="docs/Unidad2.pdf" download="documento.pdf" class="itemMenu botonPdf descargar" style="text-decoration: none;"> Descargar</a>
+            </div>
+            <div>
+                <button class="botonPdf itemMenu" onclick="window.open('docs/cheatsheet_css3.pdf', '_blank')">Chuleta css3 - PDF</button>
+                <a href="docs/cheatsheet_css3.pdf" download="cheatsheet_css3.pdf" class="itemMenu botonPdf descargar" style="text-decoration: none;"> Descargar</a>
+            </div>
+            <div>
+                <button class="botonPdf itemMenu" onclick="window.open('docs/cheatsheet_html5.pdf', '_blank')">Chuleta html5 - PDF</button>
+                <a href="docs/Unidad2.pdf" download="Unidad2.pdf" class="itemMenu botonPdf descargar" style="text-decoration: none;"> Descargar</a>
+            </div>
+            <div>
+                <button class="botonPdf itemMenu" onclick="window.open('docs/cheatsheet_flexbox.pdf', '_blank')">Chuleta flexbox - PDF</button>
+                <a href="docs/cheatsheet_flexbox.pdf" download="cheatsheet_flexbox.pdf" class="itemMenu botonPdf descargar" style="text-decoration: none;"> Descargar</a>
+            </div>
+            <div>
+                <button class="botonPdf itemMenu" onclick="window.open('docs/Actividades_Uso de estilos.pdf', '_blank')">Actividades_Uso de estilos - PDF</button>
+                <a href="docs/Actividades_Uso de estilos.pdf" download="Actividades_Uso de estilos.pdf" class="itemMenu botonPdf descargar" style="text-decoration: none;"> Descargar</a>
+            </div>
+            <div>
+                <button class="botonPdf itemMenu" onclick="window.open('docs/Actividades Sass.pdf', '_blank')">Actividades Sass - PDF</button>
+                <a href="docs/Actividades Sass.pdf" download="Actividades Sass.pdf" class="itemMenu botonPdf descargar" style="text-decoration: none;"> Descargar</a>
+            </div>
+            <div>
+                <button class="botonPdf itemMenu" onclick="window.open('docs/bootstrap5.md', '_blank')">Chuleta bootstrap5 - md</button>
+                <a href="docs/bootstrap5.md" download="bootstrap5.md" class="itemMenu botonPdf descargar" style="text-decoration: none;"> Descargar</a>
+            </div>
+            <div>
+                <button class="botonPdf itemMenu" onclick="window.open('docs/sass.md', '_blank')">Chuleta sass - md</button>
+                <a href="docs/sass.md" download="sass.md" class="itemMenu botonPdf descargar" style="text-decoration: none;"> Descargar</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Páginas de interés</h2>
+            <ul class="urls">
+                <li><a href="https://lenguajehtml.com/html/?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5" target="_blank" rel="noopener noreferrer">Lenguaje HTML - lenguajehtml.com</a></li>
+                <li><a href="https://lenguajecss.com/css/?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5" target="_blank" rel="noopener noreferrer">Lenguaje CSS - lenguajecss.com</a></li>
+                <li><a href="https://platzi.com/blog/7-juegos-css-grid-y-flexbox/?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5" target="_blank" rel="noopener noreferrer">7 juegos CSS Grid y Flexbox - platzi.com</a></li>
+                <li><a href="https://www.youtube.com/watch?v=kED5eDjMfGM" target="_blank" rel="noopener noreferrer">You might not need a CSS framework - youtube</a></li>
+                <li><a href="https://getbootstrap.esdocu.com/?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5" target="_blank" rel="noopener noreferrer">Bootstrap en Español - getbootstrap.esdocu.com</a></li>
+                <li><a href="https://www.eniun.com/tutorial-sass/?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5" target="_blank" rel="noopener noreferrer">Tutorial de sass - eniun.com</a></li>
+                <li><a href="https://sass-lang.com/?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5" target="_blank" rel="noopener noreferrer">Sass: Syntactically Awesome Style Sheets - sass-lang.com</a></li>                
+            </ul>
+        </section>
+
+        <section>
+            <h2>Trabajos personales</h2>
+            <div>
+                <button class="botonPdf itemMenu" onclick="window.open('docs/Unidad2.pdf', '_blank')">Plantilla diseño - PDF</button>
+                <a href="docs/Unidad2.pdf" download="Unidad2.pdf" class="itemMenu botonPdf descargar" style="text-decoration: none;"> Descargar</a>
+            </div>
+            <ul class="urls">
+                <li><a href="https://www.figma.com/design/QTLPFC7fTBNyExLCgCDcqQ/P%C3%A1ginaDavidFdezGmz?node-id=0-1&t=rd8OZrC3qzSjjtcp-1" target="_blank" rel="noopener noreferrer">Diseño Figma</a></li>
+            </ul>
+        </section>
+    </main>
+    <!--
+    <script>
+        function cambiarTema() {
+            let tema = document.getElementById("tema");
+            if (tema.href.includes("estilos/frutiger.css")) {
+                tema.href = "estilos/classic9x.css";
+            } else {
+                tema.href = "estilos/frutiger.css";
+            }
+        }
+    </script>
+    -->
+</body>
+</html>

@@ -1,0 +1,284 @@
+/* Estilo Windows 95/98 compatible con las clases del proyecto Frutiger */
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "MS Sans Serif", Tahoma, Geneva, sans-serif;
+}
+
+body {
+background-color: #008080;
+background-image: none;
+padding: 20px 40px;
+color: #000;
+}
+
+/* Efecto ventana clásica de Windows 95/98 */
+.cristalAero {
+background-color: #c0c0c0;
+border: 2px solid;
+border-color: #ffffff #000000 #000000 #ffffff;
+border-radius: 0;
+backdrop-filter: none;
+-webkit-backdrop-filter: none;
+box-shadow: inset -1px -1px #808080, inset 1px 1px #dfdfdf, 2px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* ----- Barra Superior ----- */
+.barraSuperior {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+gap: 15px;
+}
+
+.seccionIzquierda {
+display: flex;
+align-items: center;
+gap: 10px;
+flex-grow: 1;
+}
+
+.listaMenu {
+display: flex;
+list-style-type: none;
+gap: 5px;
+flex-shrink: 0;
+}
+
+.botonHamburguesa {
+display: none;
+cursor: pointer;
+margin-left: auto;
+}
+
+.botonInicio {
+width: 40px;
+height: auto;
+}
+
+.botonPdf {
+padding: 8px 30px;
+font-size: 14px;
+font-weight: bold;
+display: inline-flex;
+gap: 10px;
+background-color: #c0c0c0 !important;
+border: 2px solid;
+border-color: #ffffff #000000 #000000 #ffffff !important;
+box-shadow: inset -1px -1px #808080, inset 1px 1px #dfdfdf;
+width: 30%;
+}
+
+.descargar {
+width: 15%;
+}
+
+button {
+cursor: pointer;
+}
+
+/* ----- Menú de Botones ----- */
+.itemMenu {
+background: #c0c0c0;
+border: 2px solid;
+border-color: #ffffff #000000 #000000 #ffffff;
+border-radius: 0;
+box-shadow: inset -1px -1px #808080, inset 1px 1px #dfdfdf;
+transition: none;
+}
+
+.itemMenu:hover {
+background: #d4d0c8;
+border-color: #ffffff #000000 #000000 #ffffff;
+}
+
+.itemMenu:active {
+border-color: #000000 #ffffff #ffffff #000000;
+box-shadow: inset 1px 1px #808080, inset -1px -1px #dfdfdf;
+}
+
+.itemMenu a {
+display: block;
+padding: 6px 20px;
+text-decoration: none;
+color: black;
+font-size: 13px;
+}
+
+.botonIcono a {
+padding: 6px 10px;
+}
+
+/* ----- Panel Principal ----- */
+.ventanaPrincipal {
+padding: 15px;
+min-height: 75vh;
+}
+
+.ventanaPrincipal h1 {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 20px;
+background: #000080;
+color: white;
+padding: 3px 6px;
+}
+
+.ventanaPrincipal h2 {
+font-size: 16px;
+font-weight: bold;
+margin-top: 30px;
+margin-bottom: 15px;
+background: #000080;
+color: white;
+padding: 3px 6px;
+}
+
+footer {
+display: flex;
+color: #ffffff;
+flex-direction: row;
+justify-content: space-between;
+text-align: center;
+margin-top: 20px;
+}
+
+/* ----- Cuadrícula de los temas ----- */
+.cuadriculaTemas {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+
+.itemTemas {
+display: flex;
+flex-direction: column;
+}
+
+.marcadorImagen {
+background-color: #ffffff;
+border: 2px solid;
+border-color: #808080 #ffffff #ffffff #808080;
+width: auto;
+aspect-ratio: 16 / 9;
+margin-bottom: 8px;
+overflow: hidden;
+box-shadow: inset 1px 1px #000000;
+img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+}
+
+.itemTemas p {
+font-size: 13px;
+color: #000;
+}
+
+.urls {
+margin-top: 15px;
+margin-left: 15px;
+}
+
+.imagenPortada {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 60%;
+height: auto;
+border: 2px solid;
+border-color: #808080 #ffffff #ffffff #808080;
+}
+
+/* =========================================
+DISEÑO RESPONSIVE (MEDIA QUERIES)
+========================================= */
+
+@media (max-width: 1024px) {
+.cuadriculaTemas {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.barraSuperior {
+    flex-wrap: wrap;
+}
+
+
+}
+
+@media (max-width: 768px) {
+body {
+padding: 10px;
+}
+
+.ventanaPrincipal {
+    padding: 10px;
+}
+
+.cuadriculaTemas {
+    grid-template-columns: 1fr;
+}
+
+.barraSuperior {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seccionIzquierda {
+    flex-grow: 0;
+}
+
+.elementoEscritorio {
+    display: none;
+}
+
+.botonHamburguesa {
+    display: block;
+    img {
+        height: 24px;
+        width: auto;
+    }
+}
+
+.listaMenu.desplegado {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 10px;
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+    border-radius: 0;
+    backdrop-filter: none;
+    z-index: 100;
+    gap: 2px;
+    width: 90%;
+    box-shadow: 2px 2px 0px #000;
+    padding: 4px;
+    .elementoEscritorio {
+        display: block;
+        text-align: left;
+    }
+}
+
+.botonPdf, .descargar {
+    width: 100%;
+}
+
+.imagenPortada {
+    width: 100%;
+}
+
+footer {
+    flex-flow: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+
+}

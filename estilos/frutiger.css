@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI";
+}
+
+body {
+    background-image: url('../img/aero.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px 40px; 
+    color: #111;
+}
+
+/* Efecto cristal */
+.cristalAero {
+    background: rgba(255, 255, 255, 0.55);
+    border: 3px solid rgba(0, 255, 255, 0.4);
+    border-radius: 8px;
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);/*Efecto cristal glass más moderno que en la versión anterior*/
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.8), 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ----- Barra Superior ----- */
+.barraSuperior {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.seccionIzquierda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.listaMenu {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+    flex-shrink: 0; 
+}
+
+.botonHamburguesa {
+    display: none; /*Oculto en versión PC*/
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.botonInicio {
+    width: 40px;
+    height: auto;
+}
+
+.botonPdf {
+    padding: 8px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-flex;
+    gap: 10px;
+    background-color: rgb(171, 170, 187) !important;/*!important sirve para dar máxima prioridad, si no no me hace caso*/
+    width: 30%;
+}
+
+.descargar{
+    width: 15%;
+}
+
+button{
+    cursor: pointer;/*Esto sirve para cambiar la flecha del ratón por la mano señalando (Más intuitivo)*/
+}
+
+/* ----- Menú de Botones ----- */
+.itemMenu {
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(0, 255, 255, 0.6);
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.9);
+    transition: all 0.5s ease; /*Transición para cambiar de normal a hover*/
+}
+
+.itemMenu:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #43e681;
+}
+
+.itemMenu a {
+    display: block;
+    padding: 8px 25px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.botonIcono a {
+    padding: 8px 12px;
+}
+
+/* ----- Panel Principal ----- */
+.ventanaPrincipal {
+    padding: 30px;
+    min-height: 75vh;
+}
+
+.ventanaPrincipal h1 {
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.ventanaPrincipal h2 {
+    font-size: 26px;
+    font-weight: normal;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+footer{
+    display: flex;
+    color: rgb(255, 255, 255);
+    flex-direction: row;
+    justify-content:space-between;
+    text-align: center;
+
+}
+
+/* ----- Cuadrícula de los temas ----- */
+.cuadriculaTemas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en dispositivos grandes por defecto */
+    gap: 30px;
+}
+
+.itemTemas {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.marcadorImagen {
+    background-color: white;
+    width: auto;
+    aspect-ratio: 16 / 9; 
+    margin-bottom: 10px;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.itemTemas p {
+    font-size: 15px;
+    color: #111;
+}
+
+.urls{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.imagenPortada{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVE (MEDIA QUERIES)
+   ========================================= */
+
+/* Dispositivos medianos (Tablets) - Hasta 1024px */
+/*Resumen de cambios:
+Se muestran 2 columnas en vez de 3 en el inicio*/
+@media (max-width: 1024px) {
+    .cuadriculaTemas {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en resoluciones medias */
+    }
+    
+    .barraSuperior {
+        flex-wrap: wrap;
+    }
+}
+
+/* Dispositivos pequeños (Móviles) - Hasta 768px */
+/*Resumen de cambios:
+Se muestra una sola columna en el inicio
+botón de descarga y archivo PDF ocupan todo el ancho
+menú hamburguesa habilitado*/
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .ventanaPrincipal {
+        padding: 15px;
+    }
+
+    .cuadriculaTemas {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mantenemos la barra superior en horizontal para que el inicio y la hamburguesa compartan línea */
+    .barraSuperior {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Evita que el contenedor izquierdo ocupe todo el ancho disponible */
+    .seccionIzquierda {
+        flex-grow: 0;
+    }
+
+    /* Ocultar elementos de escritorio */
+    .elementoEscritorio {
+        display: none;
+    }
+    
+    /* Mostrar menú hamburguesa */
+    .botonHamburguesa {
+        display: block;
+        img{
+            height: 30px;
+            width: auto;
+        }
+    }
+
+    /* Menú desplegado por JavaScript */
+    .listaMenu.desplegado {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 85px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.55);
+        border: 2px solid rgba(0, 255, 255, 0.4);
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+        z-index: 100;
+        gap: 5px;
+        width: 95%;
+        .elementoEscritorio {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .botonPdf, .descargar {
+        width: 100%;
+    }
+
+    .imagenPortada{
+        width: 100%;
+    }
+
+    footer {
+        flex-flow: wrap;
+    }
+
+}

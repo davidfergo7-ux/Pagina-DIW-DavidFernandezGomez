@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="tema" rel="stylesheet" type="text/css" href="estilos/frutiger.css">
+    <title>Tema 4</title>
+</head>
+<body>
+    
+    <header class="barraSuperior">
+        <div class="seccionIzquierda">
+            <img onmouseout="this.src='img/WinVistaLogo.png';" onmouseover="this.src='img/Win9XLogo.png';" src="img/WinVistaLogo.png" class="botonInicio logoNormal" onclick="cambiarTema()"/>
+        </div>
+        
+        <div class="itemMenu botonHamburguesa" onclick="mostrarMenu()">
+            <a href="#"><img src="img/tecla-menu-contextual.png"/></a>
+        </div>
+
+        <ul class="listaMenu" id="menuNavegacion">
+            <li class="itemMenu elementoEscritorio"><a href="index.html">Principal</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema1.html">Tema 1</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema2.html">Tema 2</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema3.html">Tema 3</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema4.html">Tema 4</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema5.html">Tema 5</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema6.html">Tema 6</a></li>
+        </ul>
+    </header>
+
+    <script>
+        // Función para desplegar menú en el móvil
+        function mostrarMenu() {
+            const menu = document.getElementById('menuNavegacion');
+            menu.classList.toggle('desplegado');
+        }
+    </script>
+
+    <main class="ventanaPrincipal cristalAero">
+        <h1>Tema </h1>
+
+        <section>
+            <h2>Contenidos</h2>
+            <div>
+                <button class="botonPdf itemMenu" onclick="window.open('docs/Unidad3.pdf', '_blank')">Teoría de la unidad - PDF</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Páginas de interés</h2>
+            <ul class="urls">
+                <li><a href="" target="_blank" rel="noopener noreferrer"></a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Trabajos personales</h2>
+        </section>
+    </main>
+    <!--
+    <script>
+        function cambiarTema() {
+            let tema = document.getElementById("tema");
+            if (tema.href.includes("estilos/frutiger.css")) {
+                tema.href = "estilos/classic9x.css";
+            } else {
+                tema.href = "estilos/frutiger.css";
+            }
+        }
+    </script>
+    -->
+</body>
+</html>

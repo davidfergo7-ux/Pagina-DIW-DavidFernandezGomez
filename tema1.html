@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="tema" rel="stylesheet" type="text/css" href="estilos/frutiger.css">
+    <title>Tema 1</title>
+</head>
+<body>
+    
+    <header class="barraSuperior">
+        <div class="seccionIzquierda">
+            <img onmouseout="this.src='img/WinVistaLogo.png';" onmouseover="this.src='img/Win9XLogo.png';" src="img/WinVistaLogo.png" class="botonInicio logoNormal" onclick="cambiarTema()"/>
+        </div>
+        
+        <div class="itemMenu botonHamburguesa" onclick="mostrarMenu()">
+            <a href="#"><img src="img/tecla-menu-contextual.png"/></a>
+        </div>
+
+        <ul class="listaMenu" id="menuNavegacion">
+            <li class="itemMenu elementoEscritorio"><a href="index.html">Principal</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema1.html">Tema 1</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema2.html">Tema 2</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema3.html">Tema 3</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema4.html">Tema 4</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema5.html">Tema 5</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema6.html">Tema 6</a></li>
+        </ul>
+    </header>
+
+    <script>
+        // Función para desplegar menú en el móvil
+        function mostrarMenu() {
+            const menu = document.getElementById('menuNavegacion');
+            menu.classList.toggle('desplegado');
+        }
+    </script>
+
+    <main class="ventanaPrincipal cristalAero">
+        <h1>Tema 1: Planificación de Interfaces</h1>
+
+        <img src="img/Tema1.jpg" class="imagenPortada"/>
+
+        <section>
+            <h2>Contenidos</h2>
+            <div>
+                <button class="botonPdf itemMenu" onclick="window.open('docs/Unidad1.pdf', '_blank')">Teoría de la unidad</button>
+                <a href="docs/Unidad1.pdf" download="Unidad1.pdf" class="itemMenu botonPdf descargar" style="text-decoration: none;"> Descargar</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Páginas de interés</h2>
+            <ul class="urls">
+                <li><a href="https://uifrommars.com/guia-diseno-cards/?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5" target="_blank" rel="noopener noreferrer">Guía para diseñar cards en UI: Mejores prácticas y ejemplos</a></li>
+                <li><a href="https://www.jcyl.es/junta/guia/guia-estilos.html?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5" target="_blank" rel="noopener noreferrer">Guía de estilos y componentes - Junta de Castilla y León</a></li>
+                <li><a href="https://www.ionos.es/digitalguide/paginas-web/diseno-web/la-guia-de-estilo-perfecta-para-paginas-web/" target="_blank" rel="noopener noreferrer">La guía de estilo perfecta para páginas web - IONOS</a></li>
+                <li><a href="https://aulacm.com/gama-colores-diseno-grafico-web/?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5" target="_blank" rel="noopener noreferrer">15 Herramientas para elegir Paletas y Gamas de Color - Aula CM</a></li>
+                <li><a href="https://www.youtube.com/watch?v=B6wmuE41V7k" target="_blank" rel="noopener noreferrer">TUTORIAL FIGMA: Usar un plugin para crear estilos de color</a></li>
+                <li><a href="https://m2.material.io/design/color/the-color-system.html?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5" target="_blank" rel="noopener noreferrer">The color system - Material Design 2</a></li>
+                <li><a href="https://m3.material.io/styles/color/roles?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5" target="_blank" rel="noopener noreferrer">Color roles - Material Design 3</a></li>
+                <li><a href="https://creativolandia.com/como-elegir-los-colores-para-mi-web/?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5#Como_crear_una_paleta_de_colores_para_tu_web_y_no_morir_en_el_intento" target="_blank" rel="noopener noreferrer">¡Ni se te ocurra elegir los colores para tu web sin antes leer esto! - Creativolandia</a></li>
+                <li><a href="https://www.youtube.com/watch?is=EX6L4L5E09JKfz2E&classId=c69e8f66-4b41-42af-a411-b7788c4b36c5&v=cTnDkSfFeC0&feature=youtu.be" target="_blank" rel="noopener noreferrer">Figma para principiantes: guía completa | Diseña tu primera app paso a paso</a></li>
+                <li><a href="https://www.youtube.com/watch?si=VakBsoN2G0ta3eF2&classId=c69e8f66-4b41-42af-a411-b7788c4b36c5&v=At4kNL4XELI&feature=youtu.be" target="_blank" rel="noopener noreferrer">Tutorial Autolayout en Figma para Principiantes</a></li>
+                <li><a href="https://colorcode.es/guia-colores-tipografia-diseno-web.html?classId=c69e8f66-4b41-42af-a411-b7788c4b36c5" target="_blank" rel="noopener noreferrer">Colores y tipografía en diseño web: cómo combinarlos - Color;Code</a></li>
+            </ul>
+            <br>
+            <h4>Aportes personales extra:</h4>
+            <ul class="urls">
+                <li><a href="https://htmlcolorcodes.com/es/" target="_blank" rel="noopener noreferrer">Códigos de Colores HTML- htmlcolorcodes.com</a></li></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Trabajos personales</h2>
+            <div>
+                <button class="botonPdf itemMenu" onclick="window.open('docs/PlantillaDIW_Original.pdf', '_blank')">Plantilla de diseño</button>
+                <a href="docs/PlantillaDIW_Original.pdf" download="PlantillaDIW_Original.pdf" class="itemMenu botonPdf descargar" style="text-decoration: none;">Descargar</a>
+            </div>
+            <ul class="urls">
+                <li><a href="https://www.figma.com/design/QTLPFC7fTBNyExLCgCDcqQ/P%C3%A1ginaDavidFdezGmz?node-id=0-1&t=rd8OZrC3qzSjjtcp-1" target="_blank" rel="noopener noreferrer">Diseño Figma</a></li>
+            </ul>
+        </section>
+    </main>
+    <!--
+    <script>
+        function cambiarTema() {
+            let tema = document.getElementById("tema");
+            if (tema.href.includes("estilos/frutiger.css")) {
+                tema.href = "estilos/classic9x.css";
+            } else {
+                tema.href = "estilos/frutiger.css";
+            }
+        }
+    </script>
+    -->
+</body>
+</html>

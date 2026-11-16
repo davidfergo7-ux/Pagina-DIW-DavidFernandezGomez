@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Esta etiqueta es obligatoria para que los media queries funcionen en dispositivos reales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="tema" rel="stylesheet" type="text/css" href="estilos/frutiger.css">
+    <title>Diseño de Interfaces Web</title>
+</head>
+<body>
+    
+    <header class="barraSuperior">
+        <div class="seccionIzquierda">
+            <img onmouseout="this.src='img/WinVistaLogo.png';" onmouseover="this.src='img/Win9XLogo.png';" src="img/WinVistaLogo.png" class="botonInicio logoNormal" onclick="cambiarTema()"/>
+        </div>
+        
+        <div class="itemMenu botonHamburguesa" onclick="mostrarMenu()">
+            <a href="#"><img src="img/tecla-menu-contextual.png"/></a>
+        </div>
+
+        <ul class="listaMenu" id="menuNavegacion">
+            <li class="itemMenu elementoEscritorio"><a href="index.html">Principal</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema1.html">Tema 1</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema2.html">Tema 2</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema3.html">Tema 3</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema4.html">Tema 4</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema5.html">Tema 5</a></li>
+            <li class="itemMenu elementoEscritorio"><a href="tema6.html">Tema 6</a></li>
+        </ul>
+    </header>
+
+    <script>
+        // Función para desplegar menú en el móvil
+        function mostrarMenu() {
+            const menu = document.getElementById('menuNavegacion');
+            menu.classList.toggle('desplegado');
+        }
+    </script>
+
+    <main class="ventanaPrincipal cristalAero">
+        <h1>Diseño de Interfaces Web</h1>
+        
+        <div class="cuadriculaTemas">
+            <div class="itemTemas"><a href="tema1.html">
+                <div class="marcadorImagen Tema1">
+                    <img src="img/Tema1.jpg" alt="imagen Tema 1: Planificación de Interfaces"/>
+                </div>
+                <p>Tema 1: Planificación de Interfaces</p></a>
+            </div>
+            <div class="itemTemas"><a href="tema2.html">
+                <div class="marcadorImagen Tema2">
+                    <img src="img/Tema2.jpg" alt="imagen Tema 2: Uso de Estilos"/>
+                </div>
+                <p>Tema 2: Uso de Estilos</p></a>
+            </div>
+            <div class="itemTemas"><a href="tema3.html">
+                <div class="marcadorImagen Tema3"><!--
+                    <img src="img/Tema3.jpg" alt="imagen Tema : "/>-->
+                </div>
+                <p>Tema 3: ---------------------</p></a>
+            </div>
+            <div class="itemTemas"><a href="tema4.html">
+                <div class="marcadorImagen Tema4"><!--
+                    <img src="img/Tema4.jpg" alt="imagen Tema : "/>-->
+                </div>
+                <p>Tema 4: ---------------------</p></a>
+            </div>
+            <div class="itemTemas"><a href="tema5.html">
+                <div class="marcadorImagen Tema5"><!--
+                    <img src="img/Tema5.jpg" alt="imagen Tema : "/>-->
+                </div>
+                <p>Tema 5: ---------------------</p></a>
+            </div>
+            <div class="itemTemas"><a href="tema6.html">
+                <div class="marcadorImagen Tema6"><!--
+                    <img src="img/Tema6.jpg" alt="imagen Tema : "/>-->
+                </div>
+                <p>Tema 6: ---------------------</p></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>Diseño de Interfaces Web 2ºDAW</p>
+        </div>
+        <div>
+            <p>David Fernández Gómez</p>
+        </div>
+        <div>
+            <p>Año 2026/2027</p>
+        </div>
+    </footer>
+    <!--Contenido experimental-->
+    <!--<script>
+        function cambiarTema() {
+            let tema = document.getElementById("tema");
+            if (tema.href.includes("frutiger.css")) {
+                tema.href = "classic9x.css";
+            } else {
+                tema.href = "frutiger.css";
+            }
+        }
+    </script>-->
+</body>
+</html>
